@@ -1,0 +1,298 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+@font-face {
+    font-family: 'FontLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+    background-color: #dddddd;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#interface {
+    width: 900px;
+    background-color: white;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.63);
+    padding: 10px;
+}
+
+p {
+    text-align: justify;
+    text-indent: 20px;
+}
+
+a {
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img#icone {
+    position: relative;
+    left: 850px;
+    bottom: 120px;
+}
+
+
+/*---------------------formatação de imagens com legendas-------------------------*/
+
+figure.foto-legenda {
+    /*criar bordinha com sombra*/
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 4px black;
+    position: relative;
+}
+
+figure.foto-legenda img {
+    /*deixar imagem dentro da borda, aumentando e diminuindo ela*/
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption {
+    /*dar o efeito do quadrado preto translucido*/
+    opacity: 0;
+    /*esconder o quadrado preto pra ser vizualizado só qnd se passa o mouse por cima*/
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.397);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 0.5s;
+}
+
+figure.foto-legenda:hover figcaption {
+    opacity: 1;
+}
+
+
+/*--------------------------formatado----------------------------------*/
+
+
+/*-----------------------------formatação do menu----------------------------------*/
+
+nav#menu {
+    display: block;
+    position: relative;
+    left: 274px;
+    bottom: 117px;
+}
+
+nav#menu ul {
+    /*formatando tudo que é 'ul'*/
+    list-style: none;
+    text-transform: uppercase;
+}
+
+
+/*formatação dos itens do menu*/
+
+nav#menu li {
+    display: inline-block;
+    background-color: darkgray;
+    padding: 10px;
+    /*espaço dentro do objeto(background)*/
+    margin: 2px;
+    /*espaço fora do objeto*/
+}
+
+nav#menu ul :hover {
+    /*O que acontece qunado eu passar o mouse por cima*/
+    background-color: #606060;
+    transition: background-color 1s;
+}
+
+nav#menu h1 {
+    display: none;
+    /*esconder esse título*/
+}
+
+nav#menu a {
+    color: black;
+    text-decoration: none;
+}
+
+nav#menu li :hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/*---------------------------formatado----------------------------------*/
+
+
+/*----------------------------------Separando as partes do nosso site-----------------------------------------*/
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    background: url('../_imagens/glass-logo-peq.jpg') no-repeat 0px 80px;
+}
+
+header#cabecalho h1 {
+    font-family: 'FontLogo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.527);
+    padding: 0px;
+    bottom: 60px;
+}
+
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15pt;
+    color: #888888;
+    padding: 0px;
+    margin-top: -30px;
+}
+
+section#corpo {
+    display: block;
+    /*↗ a parte do corpo será separada em um bloquinho*/
+    width: 500px;
+    /*↗largura do bloquinho*/
+    float: left;
+    /*↗ ele flutuará para esquerda; obs: esse comando só funciona qnd tem 'display: block'*/
+    border-right: 1px solid #606060;
+    /*↗ cria uma linha para separar o corpo da parte lateral*/
+    padding-right: 15px;
+}
+
+aside#lateral {
+    display: block;
+    /*↗ a parte lateral será separada em outro bloquinho*/
+    width: 350px;
+    float: right;
+    /*↗ ele flutuará para direita*/
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.493);
+}
+
+footer#rodape {
+    clear: both;
+    /*↗ esse conteúdo será mostrado fora dessas duas divisões anteriores*/
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
+}
+
+
+/*--------------------------------------------separado---------------------------------------------*/
+
+
+/*---------------------------formatando tabela---------------------------------------*/
+
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    /*↗espaçamento entre a linha externa e a interna (0 = nenhum)*/
+    margin-left: auto;
+    margin-right: auto;
+    /*centralizar tudo*/
+}
+
+table#tabelaspec td {
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table#tabelaspec td.ce {
+    color: #ffffff;
+    background-color: #606060;
+    vertical-align: top;
+    /*a classe sobrepõe o q foi definido pela tag principal*/
+    font-weight: bold;
+    text-align: right;
+}
+
+table#tabelaspec td.cd {
+    background-color: #cecece;
+    text-align: left;
+}
+
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 14pt;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span {
+    display: block;
+    float: right;
+    color: black;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+
+/*------------------------------------formatada------------------------------------*/
+
+
+/*------------------Formatando o article(a section inteira) que é a unica notícia------------------*/
+
+article#noticia-principal h2 {
+    /*formatando titulos de lá*/
+    font-size: 16pt;
+    color: #888888;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1 {
+    font-family: 'FontLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: -5px;
+    margin-top: -5px;
+}
+
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #888888;
+    background-color: white;
+}
+
+header#cabecalho-artigo h3 {
+    font-size: 12pt;
+    color: #606060
+}
+
+header#cabecalho-artigo h3.direita {
+    text-align: right;
+}
+
+
+/*------------------------------------------------formatado-------------------------------------------------*/
+
+
+/*----------------------------------------formatando títulos do aside--------------------------------------*/
+
+aside#lateral h1 {
+    font-family: 'FontLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 13pt;
+    color: white;
+    padding: 5px;
+}

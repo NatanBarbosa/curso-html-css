@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+/*-----------------configurar o ul em geral para ficar bem separado(pra dar espaço na hora de crescer)---------------------------*/
+
+ul#album-fotos {
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+    list-style: none;
+}
+
+
+/*-----------------configurar o ul em geral para ficar bem separado---------------------------*/
+
+
+/*----------------configurar o li em geral para eles ficarem separados em caixinhas----------------------*/
+
+ul#album-fotos li {
+    float: left;
+    /*um flutua à esquerda do outro*/
+    width: 200px;
+    height: 200px;
+    /*deixar eles separadinhos*/
+    margin: 10px;
+    border: 5px solid white;
+    /*cria uma bordinha branca bonitinha*/
+    background-color: white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.459);
+    transition: all 0.3s ease-in;
+    /*all: aplica em todos li; 0.3s: tempo que ocorre a animação; easy-in: nome do efeito da animação*/
+}
+
+
+/*----------------configurar o li em geral para eles ficarem separados em caixinhas----------------------*/
+
+
+/*-------------configurar cada li para ter o fundo de uma imagem (lista separada no html)-----------------*/
+
+ul#album-fotos li#foto01 {
+    background: url('../_imagens/galeria-01.jpg') no-repeat;
+    background-position: 50% 50%;
+    /*posicionar ele 50% na lateral e 50% na vertical (meio da imagem)*/
+    /*Ela está no meio pq o zoom vai partir do meio*/
+    background-size: 400px 400px;
+    background-color: white;
+}
+
+ul#album-fotos li#foto02 {
+    background: url('../_imagens/galeria-02.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+
+ul#album-fotos li#foto03 {
+    background: url('../_imagens/galeria-03.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+
+ul#album-fotos li#foto04 {
+    background: url('../_imagens/galeria-04.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+
+ul#album-fotos li#foto05 {
+    background: url('../_imagens/galeria-05.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+
+ul#album-fotos li#foto06 {
+    background: url('../_imagens/galeria-06.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+
+
+/*-------------configurar cada li para ter o fundo de uma imagem (lista separada no html)-----------------*/
+
+
+/*-------------------configurando a legenda das fotos e a escondendo temporariamente------------------*/
+
+ul#album-fotos li span {
+    opacity: 0;
+    /*por enquanto ela vai estar invisivel. Assim q o usuário passar o mouse ela vai ficar visivel*/
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    background-color: rgba(0, 0, 0, 0.329);
+    font-size: 9pt;
+    line-height: 370px;
+    /*↑ isso vai fazer com que a legenda desça*/
+    padding: 5px;
+}
+
+ul#album-fotos li:hover span {
+    /*quando o usuário passar o mouse em cima do li, o span aparece*/
+    opacity: 1;
+}
+
+
+/*-------------------configurando a legenda das fotos e a escondendo temporariamente------------------*/
+
+
+/*----------configurando o zoom das imagens que vai dar qnd o usuário passar o mouse por cima---------*/
+
+ul#album-fotos li#foto01:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+    /*redimensionar imagens pro tamanho original (sem zoom)*/
+}
+
+ul#album-fotos li#foto02:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+    /*redimensionar imagens pro tamanho original (sem zoom)*/
+}
+
+ul#album-fotos li#foto03:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+    /*redimensionar imagens pro tamanho original (sem zoom)*/
+}
+
+ul#album-fotos li#foto04:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+    /*redimensionar imagens pro tamanho original (sem zoom)*/
+}
+
+ul#album-fotos li#foto05:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+    /*redimensionar imagens pro tamanho original (sem zoom)*/
+}
+
+ul#album-fotos li#foto06:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+    /*redimensionar imagens pro tamanho original (sem zoom)*/
+}
+
+ul#album-fotos li:hover {
+    transform: scale(1.5);
+    /*responsavel pelo redimensionamento do li(deixar ele grande)*/
+    /*-webkit-transition: all 0.3s ease-in; lá no ul#album-fotos li*/
+    /*all:*/
+}
